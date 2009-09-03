@@ -12,7 +12,7 @@ import com.sakasu.MyLauncherActivity.Quote;
 /**
  * for brainy quotes.
  * 
- * @author sujay
+ * @author sakasu
  * 
  */
 
@@ -100,40 +100,9 @@ public class QuoteContentHandler implements ContentHandler {
 	@Override
 	public void startPrefixMapping(String prefix, String uri)
 			throws SAXException {
-		// TODO Auto-generated method stub
-
 	}
 
 	public ArrayList<Quote> getReceivedQuotes() {
 		return receivedQuotes;
 	}
 }
-//new Thread() {
-//public void run() {
-//DefaultHttpClient httpClient = new DefaultHttpClient();
-//HttpGet httpGet = new HttpGet(
-//"http://feeds.feedburner.com/brainyquote/QUOTEBR");
-//try {
-//HttpResponse response = httpClient.execute(httpGet);
-//System.out.println(response.getStatusLine());
-//HttpEntity entity = response.getEntity();
-//try {
-//Xml.parse(entity.getContent(), Encoding.UTF_8,
-//quoteContentHandler);
-//} catch (IllegalStateException e) {
-//// TODO Auto-generated catch block
-//e.printStackTrace();
-//} catch (SAXException e) {
-//// TODO Auto-generated catch block
-//e.printStackTrace();
-//}
-//quotes.addAll(quoteContentHandler.getReceivedQuotes());
-//} catch (ClientProtocolException e) {
-//// TODO Auto-generated catch block
-//e.printStackTrace();
-//} catch (IOException e) {
-//// TODO Auto-generated catch block
-//e.printStackTrace();
-//}
-//};
-//}.start();
